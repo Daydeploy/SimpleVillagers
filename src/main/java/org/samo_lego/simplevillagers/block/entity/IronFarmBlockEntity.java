@@ -79,8 +79,9 @@ public class IronFarmBlockEntity extends AbstractFarmBlockEntity {
         ResourceLocation resourceLocation = EntityType.IRON_GOLEM.getDefaultLootTable();
         LootTable lootTable = ((ServerLevel) this.level).getServer().getLootData().getLootTable(resourceLocation);
         LootContext.Builder builder = this.createLootContext();
+        LootContext lootContext = builder.create(Optional.of(new ResourceLocation(MOD_ID)));
 
-        lootTable.getRandomItems(builder.create(new ResourceLocation(MOD_ID)), this::fillIron);
+        lootTable.getRandomItems(lootContext, this::fillIron);
     }
 
     private void fillIron(ItemStack stack) {
