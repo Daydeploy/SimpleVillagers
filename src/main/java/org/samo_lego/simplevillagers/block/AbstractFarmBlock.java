@@ -15,7 +15,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,7 +30,7 @@ import org.samo_lego.simplevillagers.block.entity.AbstractFarmBlockEntity;
 import static org.samo_lego.simplevillagers.network.NetworkHandler.isVanilla;
 
 @SuppressWarnings({"deprecation"})
-public abstract class AbstractFarmBlock extends BaseEntityBlock implements PolymerBlock, PolymerClientDecoded, PolymerKeepModel, EntityBlock {
+public abstract class AbstractFarmBlock extends BaseEntityBlock implements PolymerBlock, PolymerClientDecoded, PolymerKeepModel {
     public static final BooleanProperty EMPTY = BooleanProperty.create("empty");
 
     public AbstractFarmBlock(Properties properties) {
